@@ -3,7 +3,8 @@
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
-[![Dependencies][dependencies-image]][dependencies-url]  
+[![Dependencies][dependencies-image]][dependencies-url]
+[![devDependencies][devdependencies-image]][devdependencies-url]  
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 Checks asynchronously whether an image URL is valid or not.
@@ -52,5 +53,9 @@ const promise = validator({url: '<image-url>', timeout: 10000})
 [travis-url]: https://travis-ci.org/OronNadiv/validate-image-url
 [coveralls-image]: http://img.shields.io/coveralls/OronNadiv/validate-image-url.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/OronNadiv/validate-image-url?branch=master
-[dependencies-image]: https://img.shields.io/david/OronNadiv/validate-image-url.svg?style=flat-square
+
+[dependencies-image]: https://david-dm.org/OronNadiv/validate-image-url/status.svg?style=flat-square
+[devdependencies-image]: https://david-dm.org/OronNadiv/validate-image-url/dev-status.svg?style=flat-square
+
 [dependencies-url]: https://david-dm.org/OronNadiv/validate-image-url
+[devdependencies-url]: https://david-dm.org/OronNadiv/validate-image-url?type=dev
