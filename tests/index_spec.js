@@ -5,6 +5,7 @@ import { expect } from 'chai'
 const IMAGE_EXISTS_URL = () => `https://i.imgur.com/07uLXwc.jpg?${Math.random()}`
 const IMAGE_DOES_NOT_EXIST_URL = () => `http://fake-url/!!!/1.jpg?${Math.random()}`
 const TIMEOUT = 4000
+jasmine.DEFAULT_TIMEOUT_INTERVAL = TIMEOUT * 3
 
 describe('Image loader', () => {
   describe('Image exists', () => {
@@ -38,9 +39,7 @@ describe('Image loader', () => {
           done.fail('should not be rejected')
         })
       promise.cancel()
-      setTimeout(() => {
-        done()
-      }, TIMEOUT)
+      setTimeout(done, TIMEOUT)
     })
   })
 
