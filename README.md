@@ -1,4 +1,4 @@
-###Validate Image URL 
+### Validate Image URL 
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
@@ -15,12 +15,12 @@ In that case, you might want show a different image such as:
 
 This package tells you whether the image URL is valid or not.
 
-####Installation:
+#### Installation:
 ```
 npm install --save validate-image-url
 ```
 
-####Usage:
+#### Usage:
 ```javascript
 import validator from 'validate-image-url'
 
@@ -36,7 +36,7 @@ const promise = validator({url: '<image-url>', timeout: 10000})
   // promise.cancel()
 ```
 
-####Options:
+#### Options:
 * **url** - (required) image URL.
 * **timeout** - (optional) timeout in milliseconds before canceling request and rejecting the promise. Default: 5000 milliseconds.
 
