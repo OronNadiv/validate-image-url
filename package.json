@@ -1,0 +1,77 @@
+{
+  "name": "validate-image-url",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=4",
+    "npm": ">=2"
+  },
+  "author": {
+    "name": "Oron Nadiv"
+  },
+  "description": "Checks asynchronously whether an image URL is valid or not.",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack --config webpack.config.production.js",
+    "test": "karma start --single-run --no-auto-watch karma.config.js",
+    "test:coverall": "karma start --single-run --no-auto-watch karma.config.js && cat ./build/reports/coverage/report-lcov/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./build",
+    "test:watch": "karma start --auto-watch --no-single-run karma.config.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OronNadiv/validate-image-url.git"
+  },
+  "keywords": [
+    "image",
+    "url",
+    "validate",
+    "invalid",
+    "valid"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "lodash.isnumber": "^3.0.3",
+    "lodash.isstring": "^4.0.1"
+  },
+  "devDependencies": {
+    "ajv": "^5.2.3",
+    "babel-core": "^6.9.1",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "escope": "^3.6.0",
+    "eslint": "^4.7.2",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-import-resolver-node": "^0.3.1",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "istanbul-instrumenter-loader": "^3.0.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.0.0",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-spec-reporter": "^0.0.31",
+    "karma-webpack": "^2.0.4",
+    "phantomjs-polyfill": "0.0.2",
+    "phantomjs-prebuilt": "^2.1.7",
+    "rimraf": "^2.6.2",
+    "underscore": "^1.8.3",
+    "webpack": "^3.6.0"
+  }
+}
